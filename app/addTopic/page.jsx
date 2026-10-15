@@ -17,14 +17,14 @@ const AddTopic = () => {
     try{
       const res = await fetch('/api/topics',{
         method:'POST',
-        headers:{'Content-Type':'application/json'},
+        headers:{'Content-Type':'application/json'
         body:JSON.stringify({title,description})
       });
       if(res.ok){
         router.push('/');
       }
       else{
-        console.log('failed adding topic');
+        console.log('failed adding topic'
       }
     }catch(err){
       console.log(err);
