@@ -1,6 +1,5 @@
 "use client";
 
-import { set } from "mongoose";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -16,7 +15,7 @@ const AddTopic = () => {
     }
 
     try{
-      const res = await fetch('http://localhost:3000/api/topics',{
+      const res = await fetch('/api/topics',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify({title,description})

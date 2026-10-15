@@ -9,8 +9,8 @@ const confirmed = confirm("Are you sure?");
     if (confirmed) {
       try {
         console.log("Deleting topic with ID:", id); // Debug log
-        
-        const res = await fetch(`http://localhost:3000/api/topics?id=${id}`, {
+
+        const res = await fetch(`/api/topics?id=${id}`, {
           method: "DELETE",
         });
         
