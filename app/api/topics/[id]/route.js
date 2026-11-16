@@ -8,8 +8,8 @@ export async function PUT(request, { params }) {
         console.log("Params:", params);
         
         const { id } = params;
-        const body = await request.json();
-        console.log("Request body:", body);
+        const body = await request.json()
+        console.log("Request body:", body)
         
         const { newTitle: title, newDescription: description } = body;
         
@@ -17,7 +17,7 @@ export async function PUT(request, { params }) {
         
         const updatedTopic = await Topic.findByIdAndUpdate(
             id, 
-            { title, description },
+            { title, description }
             { new: true }
         );
         
